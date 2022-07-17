@@ -26,7 +26,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  /* cursor: none !important; */
+  cursor: none !important;
 }
 
 body {
@@ -74,7 +74,7 @@ ul {
   top: 0;
   left: 0;
   z-index: 9999;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -89,10 +89,10 @@ ul {
   font-size: 360px;
   line-height: 453px;
   color: #fff;
-  /* opacity: 0; */
+  opacity: 0;
   transform: translateX(7%);
   transition: opacity 0.3s ease-in-out;
-  /* animation: preloader 20s linear; */
+  animation: preloader 20s linear;
 }
 
 .preloader__forward {
@@ -105,8 +105,8 @@ ul {
   font-weight: 300;
   font-size: 72px;
   line-height: 91px;
-  transform: translate(-50%, -50%);
-  /* opacity: 0; */
+  transform: translate(-50%, -20%);
+  opacity: 0;
   transition: opacity 0.3s cubic-bezier(0.770, 0.125, 0.265, 1.040), transform 0.3s cubic-bezier(0.770, 0.125, 0.265, 1.040);
 }
 
@@ -117,7 +117,6 @@ ul {
   z-index: -1;
   width: 330px;
   height: 220px;
-  background-color: #fff;
   transform: translate(-50%, -50%);
 }
 
@@ -130,6 +129,42 @@ ul {
   height: 100%;
   background-color: #fff;
   transition: width 0.3s cubic-bezier(0.770, 0.125, 0.265, 1.040);
+}
+
+.preloader-animation .preloader__back {
+  opacity: 0.15;
+}
+
+.preloader-animation .preloader__forward {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.preloader-animation .preloader__background::before {
+  width: 330px;
+  transition-delay: 0.5s;
+}
+
+.preloader-hidden .preloader__back {
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.770, 0.125, 0.265, 1.040), transform 0.3s cubic-bezier(0.770, 0.125, 0.265, 1.040);
+}
+
+.preloader-hidden .preloader__background::before {
+  width: 0;
+}
+
+.preloader-hidden .preloader__forward {
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+.preloader-none {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 @keyframes preloader {
@@ -177,13 +212,14 @@ ul {
   height: 55px;
   background: #cdcdcd;
   transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .mouse__view {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,6 +234,21 @@ ul {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+}
+
+.view-visible .mouse__view {
+  opacity: 1;
+}
+
+.links-visible::after {
+  border: 4px solid #cdcdcd;
+  background-color: transparent;
+  transition: 0.3s;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.links-visible::before {
+  opacity: 0;
 }
 
 .container {
@@ -403,7 +454,7 @@ ul {
 .shapes {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 33.5%;
   height: 100%;
 }
@@ -412,7 +463,7 @@ ul {
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -427,7 +478,7 @@ ul {
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -456,6 +507,7 @@ ul {
 .slide-bg__inner--current {
   z-index: 15;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .index {
