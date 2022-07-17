@@ -5,8 +5,172 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Art of Arita</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  
+  <div class="mouse" aria-hidden="true">
+    <div class="mouse__view">View</div>
+  </div>
+
+  <section class="preloader">
+    <span class="preloader__back">Contemporary</span>
+    <p class="preloader__forward">
+      The Art of Árita
+      <span class="preloader__background"></span>
+    </p>
+  </section>
+
+  <input type="hidden" value="1" id="helper-input">
+
+  <div class="site-container">
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo logo" href="#">
+          <span class="logo__letter">
+            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 37C28.7173 37 37 28.7173 37 18.5C37 8.28273 28.7173 0 18.5 0C8.28273 0 0 8.28273 0 18.5C0 28.7173 8.28273 37 18.5 37Z" fill="black"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21.0649 11.248C21.0409 11.272 20.9929 11.296 20.9689 11.296C20.8969 11.296 20.8729 11.272 20.8729 11.2C20.8729 11.176 20.8969 11.128 20.9449 11.08C21.8897 10.1849 22.8918 8.79754 23.5241 7.92207L23.5242 7.92204C23.8074 7.52993 24.0164 7.24051 24.1129 7.144C24.2329 7.024 24.4729 7 24.7369 7C24.9529 7 25.1449 7 25.2169 7.072C25.2889 7.144 25.2889 7.312 25.2889 7.576C25.2889 7.72485 25.1759 7.83602 25.0333 7.97627C25.0149 7.99432 24.9961 8.01285 24.9769 8.032C24.8713 8.13758 24.5762 8.35692 24.18 8.65128C23.3155 9.29368 21.9701 10.2934 21.0649 11.248ZM12.3769 24.136C13.5529 23.8 18.0169 19.36 20.7049 16.144C19.1929 14.176 18.2809 13.696 17.3449 13.696C15.6649 13.696 13.4569 16.072 12.4969 19C11.7289 21.376 11.7289 23.392 12.3769 24.136ZM18.2391 19.5476C17.4101 20.7613 16.4108 22.2244 16.5049 23.392C16.5289 23.872 16.7689 24.736 17.2729 25.312C17.3449 25.456 18.4009 25.456 18.6169 25.336C20.1529 24.4 21.5209 23.104 22.4089 22.24L22.2649 22.072C21.3289 23.08 19.9849 23.92 19.3849 24.184C18.9049 24.016 18.5449 23.584 18.5209 23.176C18.4249 21.16 22.3369 15.256 23.8969 13.288C23.8969 13.24 23.8969 13.192 23.8729 13.168C23.8489 13.12 23.7769 13.144 23.6809 13.24C23.1289 13.816 22.3609 14.584 22.0009 14.872C20.5849 13.336 19.9129 13.12 18.7369 13.12C16.6489 13.12 12.2569 15.496 10.7209 19.312C9.73692 21.64 9.73692 24.448 10.8649 25.336C10.9849 25.432 11.6089 25.504 11.8249 25.336C13.8169 23.608 16.7449 20.848 18.8569 18.616C18.6812 18.9002 18.4665 19.2145 18.2391 19.5476Z" fill="white"/>
+            </svg>
+          </span>
+          Arita / 16
+        </a>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Designers</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">History</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">News</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__menu menu" aria-label="Open menu"></button>
+      </div>
+    </header>
+    <main class="main-wrapper">
+      <h1 class="visually-hidden">Designers portfolio</h1>
+      <section class="main-section slide-1">
+        <div class="main-section__container container">
+          <div class="slides-container">
+            <div class="wrapper">
+              <div class="slides-container__left">
+                <div class="main-section__explore">Explore Designers</div>
+                <div class="slides-container__slide slides-container__slide--active">
+                  <div class="slides-container__text">
+                    <h2 class="slides-container__title">Kirstie van&nbsp;Noort</h2>
+                    <div class="designers-info">
+                      <div class="designers-info__image">
+                        <img src="./images/author-1.jpg" alt="Photo of Kirstie van Noort">
+                      </div>
+                      <div class="designers-info__descr">
+                        <div class="designers-info__country">Netherlands</div>
+                        <div class="designers-info__by">photo by <br> Kenta Hasegawa</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slides-container__slide">
+                  <div class="slides-container__text">
+                    <h2 class="slides-container__title">Tomás Alonso</h2>
+                    <div class="designers-info">
+                      <div class="designers-info__image">
+                        <img src="./images/author-2.jpg" alt="Photo of Tomás Alonso">
+                      </div>
+                      <div class="designers-info__descr">
+                        <div class="designers-info__country">Span</div>
+                        <div class="designers-info__by">photo by <br> Kenta Hasegawa</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slides-container__slide">
+                  <div class="slides-container__text">
+                    <h2 class="slides-container__title">Stefan Diez</h2>
+                    <div class="designers-info">
+                      <div class="designers-info__image">
+                        <img src="./images/author-3.jpg" alt="Photo of Stefan Diez">
+                      </div>
+                      <div class="designers-info__descr">
+                        <div class="designers-info__country">Germany</div>
+                        <div class="designers-info__by">photo by <br> Kenta Hasegawa</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slides-container__slide">
+                  <div class="slides-container__text">
+                    <h2 class="slides-container__title">Teruhiro Yanagihara</h2>
+                    <div class="designers-info">
+                      <div class="designers-info__image">
+                        <img src="./images/author-4.jpg" alt="Photo of Teruhiro Yanagihara">
+                      </div>
+                      <div class="designers-info__descr">
+                        <div class="designers-info__country">Japan</div>
+                        <div class="designers-info__by">photo by <br> Kenta Hasegawa</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slides-container__slide">
+                  <div class="slides-container__text">
+                    <h2 class="slides-container__title">Leon Ransmeier</h2>
+                    <div class="designers-info">
+                      <div class="designers-info__image">
+                        <img src="./images/author-5.jpg" alt="Photo of Leon Ransmeier">
+                      </div>
+                      <div class="designers-info__descr">
+                        <div class="designers-info__country">New York, USA</div>
+                        <div class="designers-info__by">photo by <br> Kenta Hasegawa</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-container__bg slide-bg">
+                <div class="slide-bg__inner slide-bg__inner--current">
+                  <a class="slide-bg__link" href="#" data-bg="./img/hero-1.jpg"></a>
+                </div>
+                <div class="slide-bg__inner index">
+                  <a class="slide-bg__link" href="#" data-bg="./img/hero-2.jpg"></a>
+                </div>
+                <div class="slide-bg__inner">
+                  <a class="slide-bg__link" href="#" data-bg="./img/hero-3.jpg"></a>
+                </div>
+                <div class="slide-bg__inner">
+                  <a class="slide-bg__link" href="#" data-bg="./img/hero-4.jpg"></a>
+                </div>
+                <div class="slide-bg__inner">
+                  <a class="slide-bg__link" href="#" data-bg="./img/hero-5.jpg"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shapes">
+          <div class="shapes__item shapes__item--current">
+            <div class="shapes__contents" data-bg="#c9b39b"></div>
+          </div>
+          <div class="shapes__item">
+            <div class="shapes__contents" data-bg="#d6d8cf"></div>
+          </div>
+          <div class="shapes__item">
+            <div class="shapes__contents" data-bg="#d2e5de"></div>
+          </div>
+          <div class="shapes__item">
+            <div class="shapes__contents" data-bg="#dfe5e7"></div>
+          </div>
+          <div class="shapes__item">
+            <div class="shapes__contents" data-bg="#d6d8cf"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
