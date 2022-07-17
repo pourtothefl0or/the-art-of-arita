@@ -16,10 +16,16 @@ const init = () => {
 
   const showNextSlide = () => {
     bgSlides('down');
+    imagesSlides('down');
+    shapesSlides('down');
+    textSlides('down');
   };
 
   const showPrevSlide = () => {
     bgSlides('up');
+    imagesSlides('up');
+    shapesSlides('up');
+    textSlides('up');
   };
 
   if (window.innerWidth >= 768) {
